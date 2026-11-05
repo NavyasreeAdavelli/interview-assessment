@@ -1,3 +1,11 @@
 spring:
   application:
     name: transaction-processor
+  jpa:
+    open-in-view: false
+
+transaction-processing:
+  max-attempts: 3
+  retry-backoff: 2s
+  processing-claim-timeout: 30s
+  simulated-transient-failure-transaction-ids: []
